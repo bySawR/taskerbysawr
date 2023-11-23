@@ -48,10 +48,10 @@ function renderSavedTweets() {
 
     // Include a calendar icon before the date
     const calendarIcon = '';
-    const dateDisplay = `<p class="tweet-date">${calendarIcon}${tweetDate}</p>`;
+    const dateDisplay = `<p class="tweet-date">Created: ${calendarIcon}${tweetDate}</p>`;
 
     const postButton = `<a class="tweet-button" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}" target="_blank">Post</a>`;
-    const copyButton = `<button class="tweet-button copy-button" data-text="${encodeURIComponent(tweetText)}">Copy to Clipboard</button>`;
+    const copyButton = `<button class="tweet-button copy-button" data-text="${encodeURIComponent(tweetText)}">Copy</button>`;
     const deleteButton = `<button class="delete-button" data-index="${index}">Delete</button>`;
 
     const buttonContainer = document.createElement('div');

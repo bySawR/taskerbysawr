@@ -19,6 +19,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    row-gap: 20px;;
   }
   .tweet-container {
     margin-bottom: 10px;
@@ -31,7 +32,7 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
-    width: 32%;
+    width: calc((100% - (20px * 2)) / 3);
   }
 
 .tweet-container:hover {
@@ -99,11 +100,14 @@ font-size: 14px;
 
 
   #generate-tweet-button {
-    padding: 20px;
-  background-color: black;
-  border: 0;
-      outline: 1px solid black;
-  color: white;
+    background-color: var(--primary-color);
+    color: var(--background);
+    padding: 20px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
   .top-wrapper {
@@ -115,4 +119,8 @@ font-size: 14px;
 
   .tweet-wrapper {
     display: none;
+  }
+
+  #product-link {
+    padding: 20px;
   }
