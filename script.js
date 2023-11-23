@@ -1,41 +1,44 @@
 function addTask() {
-    const taskInput = document.getElementById('task');
-    const descriptionInput = document.getElementById('description');
-    const dueDateInput = document.getElementById('dueDate');
+  const taskInput = document.getElementById('task');
+  const descriptionInput = document.getElementById('description');
+  const dueDateInput = document.getElementById('dueDate');
 
-    const task = taskInput.value.trim();
-    const description = descriptionInput.value.trim();
-    const dueDate = dueDateInput.value;
+  const task = taskInput.value.trim();
+  const description = descriptionInput.value.trim();
+  const dueDate = dueDateInput.value;
 
-    if (!task) {
-      alert('Please enter a task.');
-      return;
-    }
-
-    const taskObject = {
-      task,
-      description,
-      dueDate,
-      status: 'todo', // Initial status is 'To Do'
-    };
-
-    // Retrieve tasks from localStorage
-    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-    // Add the new task
-    tasks.push(taskObject);
-
-    // Save tasks back to localStorage
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-
-    // Clear form inputs
-    taskInput.value = '';
-    descriptionInput.value = '';
-    dueDateInput.value = '';
-
-    // Refresh task list
-    showTasks('todo');
+  if (!task) {
+    alert('Please enter a task.');
+    return;
   }
+
+  const taskObject = {
+    task,
+    description,
+    dueDate,
+    status: 'todo', // Initial status is 'To Do'
+  };
+
+  // Retrieve tasks from localStorage
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+  // Add the new task
+  tasks.push(taskObject);
+
+  // Save tasks back to localStorage
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  // Save tasks as a cookie
+  document.cookie = `tasks=${JSON.stringify(tasks)}; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/`;
+
+  // Clear form inputs
+  taskInput.value = '';
+  descriptionInput.value = '';
+  dueDateInput.value = '';
+
+  // Refresh task list
+  showTasks('todo');
+}
 
   function showTasks(status) {
     const taskList = document.getElementById('taskList');
