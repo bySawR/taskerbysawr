@@ -102,12 +102,18 @@ font-size: 14px;
   #generate-tweet-button {
     background-color: var(--primary-color);
     color: var(--background);
-    padding: 20px 30px;
+    padding: 10px 30px;
+    min-width: 150px;
+    height: 72px;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+
+ #generate-tweet-button:hover {
+    background-color: #1a1a1a; /* Darken the color on hover */
   }
 
   .top-wrapper {
