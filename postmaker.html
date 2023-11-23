@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasker | by SawR</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="sidePanel">
+        <div class="sidepanel-heading">
+        <img class="logo" src="assets/logo.svg" alt="Logo">
+        <h2 class="sidepanel">Tasker</h2>
+    </div>
+        <ul>
+            <div class="section-sidepanel">TASKS</div>
+          <li><a href="#" onclick="showTasks('todo')"><iconify-icon icon="radix-icons:dashboard" width="28"></iconify-icon>To Do</a></li>
+          <li><a href="#" onclick="showTasks('archive')"><iconify-icon icon="solar:archive-linear" width="28"></iconify-icon>Archived</a></li>
+        <!-- SECTION -->
+          <div class="space-line"></div>
+        <!-- SECTION -->
+          <div class="section-sidepanel">SOCIALS</div>
+          <li><a href="#" onclick="showTasks('postmaker')"><iconify-icon icon="solar:download-linear" width="28" flip="vertical"></iconify-icon>Post Maker</a></li>
+
+          <!-- Add more options as needed -->
+        </ul>
+        <div></div>
+      </div>
+    <div id="content">
+        <div class="header-wrapper">
+      <h1>Overview</h1>
+      <button id="openModal" onclick="openModal()">New Task +</button>
+    </div>
+    <div class="table-head-wrapper">
+    <div class="table-header">Task</div>
+    <div class="table-header">Description</div>
+    <div class="table-header">Date</div>
+    </div>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <!-- Modal content -->
+  <div id="overlay" onclick="closeModal()"></div>
+  <div id="taskFormModal">
+    <button id="closeModal" onclick="closeModal()">✖</button>
+    <form id="taskForm">
+      <label for="task">Task:</label>
+      <input type="text" id="task" required>
+      <label for="description">Description:</label>
+      <textarea id="description"></textarea>
+      <label for="dueDate">Due Date:</label>
+      <input type="date" id="dueDate">
+      <button type="button" id="addTaskBtn" onclick="addTask()">Add Task</button>
+    </form>
+  </div>
+  
+
+  <script src="script.js"></script> <!-- Link to your external script.js file -->
+</body>
+</html>
