@@ -1,0 +1,413 @@
+:root {
+    --primary-color: #272727;
+    --text: white;
+    --background: #F4F5FC;
+    --sidebar-gray-background: #DCE1EB;
+    --red: #F55E5E;
+    --item-hover: #F0F0F0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  height: 100%;
+  margin: 0; /* Remove default margin to ensure full height */
+}
+
+html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+html::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+html {
+  height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+#container {
+    display: flex;
+    height: 100%; /* Ensure container takes full height */
+}
+
+#sidePanel {
+    width: 250px;
+    background-color: white;
+    color: inherit;
+    display: flex;
+    padding: 30px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    overflow-y: auto; /* Enable vertical scrolling if the content is too long */
+}
+
+#content {
+    flex-grow: 1;
+    padding: 30px;
+    padding-left: 300px; /* Adjust the margin to the width of the side panel */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+h1 {
+    color: inherit;
+    font-size: 48px;
+}
+
+h2.sidepanel {
+    font-size: 24px;
+    color: inherit;
+}
+
+.sidepanel-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 40px;
+}
+
+.task {
+    margin-bottom: 10px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: background-color 0.3s ease; /* Add a transition for a smoother effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task:hover {
+    background-color: #f0f0f0; /* Adjust this color to match your desired hover color */
+}
+
+.finished {
+    background-color: #DEF2D6; /* Green */
+    color: #5C7054;
+}
+
+.finished:hover {
+    background-color: #c1e1b5; /* Adjust this color to match your desired hover color */
+}
+
+.due {
+    background-color: #F8F3D6; /* Yellow */
+    color: #BA9449;
+}
+
+.due:hover {
+    background-color: #e5d8a4; /* Adjust this color to match your desired hover color */
+}
+
+.overdue {
+    background-color: #EBC8C4; /* Red */
+    color: #B33B47;
+}
+
+.overdue:hover {
+    background-color: #dbb3af; /* Adjust this color to match your desired hover color */
+}
+
+.task.completed {
+    background-color: #DEF2D6;
+}
+
+.description {
+    color: #666;
+}
+
+.due-date {
+    color: #ff9900;
+}
+
+.completed {
+    color: #9fe9b0;
+}
+
+.delete {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+
+#sidePanel ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%; /* Set the width to 100% */
+}
+
+#sidePanel li {
+    margin-bottom: 10px;
+    width: 100%; /* Set the width to 100% */
+}
+
+#sidePanel a {
+    text-decoration: none;
+    box-sizing: border-box;
+    color: inherit;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 16px;
+    gap: 8px;
+    transition: background-color 0.2s ease-in-out;
+    width: 100%; /* Set the width to 100% */
+}
+
+#sidePanel a:hover {
+    background-color: var(--item-hover);
+    color: var(--primary-color);
+}
+
+#sidePanel a img {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+}
+
+#sidePanel .active {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--background);
+}
+
+#sidePanel .active img {
+    filter: brightness(0) invert(1);
+}
+
+#taskForm {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  flex-basis: 100%;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  flex-basis: calc(50% - 10px); /* Adjust the width based on your preference */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-right: 10px; /* Adjust the space between fields */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a1a1a; /* Darken the color on hover */
+}
+
+
+    /* Your existing styles */
+
+    /* Add these styles for the modal */
+    #taskFormModal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 60px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 998;
+    }
+
+    button#closeModal {
+      background-color: #dc3545;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    #taskForm {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    label {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: var(--primary-color);
+      flex-basis: 100%;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="date"] {
+      flex-basis: calc(100% - 10px); /* Adjust the width based on your preference */
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      color: var(--primary-color);
+      margin-right: 10px; /* Adjust the space between fields */
+    }
+
+    textarea {
+      resize: vertical; /* Allow vertical resizing */
+    }
+
+    button#addTaskBtn {
+      background-color: var(--primary-color);
+      color: var(--background);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button#addTaskBtn:hover {
+      background-color: #1a1a1a;
+    }
+
+    .header-wrapper {
+        display: flex;
+        flex: column;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    img.logo {
+        height: 36px;
+    }
+
+.task-details {
+    display: flex;
+}
+
+.table-head-wrapper {
+    display: flex;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+.table-header {
+    width: 350px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.cta-button-container {
+    display: flex;
+    gap: 4px;
+}
+
+cta-button {
+    height: 36px;
+    width: 36px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--primary-color);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a transition for a smoother effect */
+}
+
+cta-button:hover {
+    background-color: rgb(0 0 0 / 10%);
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+cta-button-delete {
+    height: 36px;
+    width: 36px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--primary-color);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a transition for a smoother effect */
+}
+
+cta-button-delete:hover {
+    background-color: rgb(255, 189, 189);
+    color: rgb(177, 84, 84);
+    opacity: 1;
+}
+
+.section-sidepanel {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    padding-left: 16px;
+}
+
+.space-line {
+    border: 1px solid var(--item-hover);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
