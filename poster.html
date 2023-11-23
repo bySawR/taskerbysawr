@@ -31,12 +31,19 @@
         <div></div>
       </div>
     <div id="content">
-        <div class="header-wrapper">
-      <h1>Overview</h1>
-      <button id="openModal" onclick="openModal()">New Post +</button>
-    </div>
-    <ul id="saved-tweets"></ul>
-    </div>
+      <div class="top-wrapper">
+        <h1>Poster</h1>
+        <form>
+          <input type="text" id="product-link" placeholder="https://shop.bysawr.com/b/signal50-ghoulie-camo-screenshot-pack" size="50">
+          <button type="button" id="generate-tweet-button">Generate Tweet</button>
+        </form>
+        <div class="tweet-wrapper">
+        <div id="tweet"></div>
+      </div>
+      </div>
+      <div class="saved-tweets-wrapper">
+        <div id="saved-tweets"></div>
+      </div>
 
     </div>
   </div>

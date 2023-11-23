@@ -21,22 +21,21 @@
     gap: 20px;
   }
   .tweet-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 350px;
-    text-align: left;
-    padding: 40px;
+    margin-bottom: 10px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    background-color: #fff;
     border-radius: 20px;
-    background-color: white;
-            transition: 0.2s;
-                    outline: 2px solid transparent;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 32%;
   }
 
 .tweet-container:hover {
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-      transition: 0.2s;
-      outline: 2px solid black;
+  background-color: #f0f0f0;
 }
 
 .delete-button {
@@ -97,17 +96,7 @@ font-size: 14px;
     gap: 10px;
   }
 
-  .saved-tweets-wrapper {
-    background: #eee;
-    padding: 30px;
-    min-height: 90vh;
-  }
 
-  input {
-    padding: 20px;
-    border: 0;
-  outline: 1px solid black;
-  }
 
   #generate-tweet-button {
     padding: 20px;
@@ -118,5 +107,12 @@ font-size: 14px;
   }
 
   .top-wrapper {
-    padding: 20px;
+    padding: 0px;
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+  }
+
+  .tweet-wrapper {
+    display: none;
   }
