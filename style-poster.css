@@ -1,0 +1,122 @@
+
+  #tweet {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #tweet-button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  #saved-tweets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .tweet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 350px;
+    text-align: left;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+            transition: 0.2s;
+                    outline: 2px solid transparent;
+  }
+
+.tweet-container:hover {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+      transition: 0.2s;
+      outline: 2px solid black;
+}
+
+.delete-button {
+  color: #bb3838;
+  background-color: white;
+  outline: 1px solid #bb3838;
+  border: 0;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+        transition: 0.2s;
+  border-radius: 0px;
+}
+
+.delete-button:hover {
+  background-color: #ffd7d7;
+        transition: 0.2s;
+}
+  .tweet-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: 0.2s;
+  }
+
+  .tweet-button:hover {
+    background-color: #4d4d4d;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+          transition: 0.2s;
+  }
+
+
+  .tweet-date {
+font-size: 14px;
+  color: #1C172C;
+  padding: 10px;
+  padding-left: 15px;
+  background: #B2D7FF;
+  border-radius: 30px;
+  padding-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+
+  .saved-tweets-wrapper {
+    background: #eee;
+    padding: 30px;
+    min-height: 90vh;
+  }
+
+  input {
+    padding: 20px;
+    border: 0;
+  outline: 1px solid black;
+  }
+
+  #generate-tweet-button {
+    padding: 20px;
+  background-color: black;
+  border: 0;
+      outline: 1px solid black;
+  color: white;
+  }
+
+  .top-wrapper {
+    padding: 20px;
+  }
