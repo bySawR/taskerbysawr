@@ -21,6 +21,11 @@
         align-items: center;
     }
 
+    
+    .file-wrapper:hover {
+        background-color: #f0f0f0;
+    }
+
     .dropdown {
         display: none;
     }
@@ -92,4 +97,20 @@
         font-size: 14px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+      }
+
+      #generate-poster-code-button {
+        background-color: var(--primary-color);
+        color: var(--background);
+        padding: 10px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        height: 72px;
+      }
+      
+      #generate-poster-code-button:hover {
+        background-color: #1a1a1a; /* Darken the color on hover */
       }
