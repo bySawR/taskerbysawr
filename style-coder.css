@@ -62,3 +62,23 @@
     #poster-product-link {
       display: none;
     }
+
+    .deleteButton {
+        color: #bb3838;
+        background-color: white;
+        outline: 1px solid #bb3838;
+        border: 0;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+              transition: 0.2s;
+        border-radius: 0px;
+      }
+      
+      .deleteButton:hover {
+        background-color: #ffd7d7;
+              transition: 0.2s;
+      }
