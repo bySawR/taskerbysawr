@@ -1,6 +1,6 @@
 #saved-code {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-direction: column;
 }
     #fileWrappers {
@@ -10,6 +10,7 @@
     }
 
     .file-wrapper {
+        box-sizing: border-box;
         margin-bottom: 10px;
         padding: 25px;
         border: 1px solid #ddd;
@@ -17,9 +18,26 @@
         border-radius: 20px;
         transition: background-color 0.3s ease;
         display: flex;
+        flex-direction: row; /* Change to column layout */
         justify-content: space-between;
-        align-items: center;
+        align-items: stretch; /* Stretch to fill the container */
     }
+    
+    .file-wrapper > .options {
+        flex-shrink: 0; /* Ensure options div doesn't shrink */
+    }
+    
+    /* Add the following style to prevent the buttons from affecting the width */
+    .file-wrapper > .buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+    
+.buttons {
+    margin-bottom: 40px;
+}
+    
 
     
     .file-wrapper:hover {
