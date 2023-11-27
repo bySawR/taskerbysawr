@@ -30,12 +30,14 @@
         <div class="space-line"></div>
         <!-- SECTION -->
         <div class="section-sidepanel">SOCIALS</div>
-        <li><li><a href="poster.html"><iconify-icon icon="mynaui:send" width="28"></iconify-icon>Posts</a></li>
+        <li>
+        <li><a href="poster.html"><iconify-icon icon="mynaui:send" width="28"></iconify-icon>Posts</a></li>
         <div class="space-line"></div>
         <!-- SECTION -->
         <div class="section-sidepanel">TOOLS</div>
         <li><a href="notes.html"><iconify-icon icon="fluent:note-16-regular" width="28"></iconify-icon>Notes</a></li>
-        <li><a href="coder.html"><iconify-icon icon="streamline:ai-prompt-spark" width="28"></iconify-icon>Coder</a></li>
+        <li><a href="coder.html"><iconify-icon icon="streamline:ai-prompt-spark" width="28"></iconify-icon>Coder</a>
+        </li>
 
         <!-- Add more options as needed -->
       </ul>
@@ -45,7 +47,8 @@
       <div class="top-wrapper">
         <h1>Coder</h1>
         <form>
-          <input type="text" id="poster-product-link" placeholder="https://drive.google.com/file/d/17tMRgf_UJ_KO9qRA38Am0yogenJLWCOL/view?usp=sharing" size="50">
+          <input type="text" id="poster-product-link"
+            placeholder="https://drive.google.com/file/d/17tMRgf_UJ_KO9qRA38Am0yogenJLWCOL/view?usp=sharing" size="50">
           <button type="button" id="generate-poster-code-button" onclick="openModal()">New Code +</button>
         </form>
       </div>
@@ -62,7 +65,8 @@
         <label for="custom-product-name">Product Name</label>
         <input type="text" id="custom-product-name" placeholder="Example: X Follow Tag">
         <label for="poster-product-link-modal">Product Link</label>
-        <input type="text" id="poster-product-link-modal" placeholder="https://drive.google.com/file/d/17tMRgf_UJ_KO9qRA38Am0yogenJLWCOL/view?usp=sharing" size="50">
+        <input type="text" id="poster-product-link-modal"
+          placeholder="https://drive.google.com/file/d/17tMRgf_UJ_KO9qRA38Am0yogenJLWCOL/view?usp=sharing" size="50">
 
         <button type="button" id="add-code-button" onclick="generatePosterCode()">Add Code</button>
       </form>
@@ -70,6 +74,6 @@
 
     <script src="script.js"></script> <!-- Link to your external script.js file -->
     <script src="script-coder.js"></script> <!-- Link to your external script.js file -->
-  </body>
+</body>
 
-  </html>
+</html>

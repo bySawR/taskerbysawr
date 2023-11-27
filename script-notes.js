@@ -1,8 +1,19 @@
 // Load saved notes from local storage
 var savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
 
-// Render saved notes
-savedNotes.forEach(renderNote);
+if (savedNotes.length === 0) {
+    // Display an empty state message when there are no saved notes
+    const emptyStateMessage = document.createElement('div');
+    emptyStateMessage.classList.add('empty-state');
+    emptyStateMessage.textContent = 'No saved notes yet. Start jotting down your thoughts!';
+    document.getElementById('notes-container').appendChild(emptyStateMessage);
+
+    // Apply single-column grid layout when there are no notes
+    document.getElementById('notes-container').style.gridTemplateColumns = 'repeat(1, 1fr)';
+} else {
+    savedNotes.forEach(renderNote);
+    document.getElementById('notes-container').style.gridTemplateColumns = ''; // Remove any existing styles
+}
 
 // Add event listener to the "Add Note" button
 document.getElementById('add-note').addEventListener('click', function () {

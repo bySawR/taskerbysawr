@@ -411,3 +411,13 @@ cta-button-delete:hover {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+
+  .empty-state {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    font-size: 24px;
+  }
