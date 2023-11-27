@@ -426,3 +426,8 @@ cta-button-delete:hover {
 min-width: 160px;
 min-height: 72px;;
 }
+
+#export-notes {
+min-width: 160px;
+min-height: 67px;;
+}
