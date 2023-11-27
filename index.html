@@ -19,26 +19,24 @@
         <img class="logo" src="assets/logo.svg" alt="Logo">
         <h2 class="sidepanel">Workspace</h2>
       </div>
-      <ul>
+      <ul id="tabs">
         <div class="section-sidepanel">TASKS</div>
-        <li><a href="#" onclick="showTasks('todo')"><iconify-icon icon="radix-icons:dashboard"
+        <li><a href="index.html" class="tab active" id="tabTodo"><iconify-icon icon="radix-icons:dashboard"
               width="28"></iconify-icon>To Do</a></li>
-        <li><a href="#" onclick="showTasks('archive')"><iconify-icon icon="solar:archive-linear"
+        <li><a href="index.html" class="tab" id="tabArchive"><iconify-icon icon="solar:archive-linear"
               width="28"></iconify-icon>Archived</a></li>
-        <!-- SECTION -->
-        <div class="space-line"></div>
-        <!-- SECTION -->
-        <div class="section-sidepanel">SOCIALS</div>
-        <li>
-        <li><a href="posts.html"><iconify-icon icon="mynaui:send" width="28"></iconify-icon>Posts</a></li>
-        <div class="space-line"></div>
-        <!-- SECTION -->
-        <div class="section-sidepanel">TOOLS</div>
-        <li><a href="notes.html"><iconify-icon icon="fluent:note-16-regular" width="28"></iconify-icon>Notes</a></li>
-        <li><a href="coder.html"><iconify-icon icon="streamline:ai-prompt-spark" width="28"></iconify-icon>Coder</a>
-        </li>
+        <!-- Add more tabs as needed -->
 
-        <!-- Add more options as needed -->
+        <div class="space-line"></div>
+        <div class="section-sidepanel">SOCIALS</div>
+        <li><a href="poster.html" class="tab" id="tabPosts"><iconify-icon icon="mynaui:send"
+              width="28"></iconify-icon>Posts</a></li>
+        <div class="space-line"></div>
+        <div class="section-sidepanel">TOOLS</div>
+        <li><a href="notes.html" class="tab" id="tabNotes"><iconify-icon icon="fluent:note-16-regular"
+              width="28"></iconify-icon>Notes</a></li>
+        <li><a href="coder.html" class="tab" id="tabCoder"><iconify-icon icon="streamline:ai-prompt-spark"
+              width="28"></iconify-icon>Coder</a></li>
       </ul>
       <div>Version 0.91</div>
     </div>
