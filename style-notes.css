@@ -160,7 +160,6 @@ transform: translateY(0);
   margin-bottom: 20px;
   margin: 20px;
   padding: 35px;
-  background-color: white;
   border-radius: 20px;
       gap: 20px;
       position: sticky;
@@ -168,22 +167,25 @@ top: 15px;
 }
 
 .add-note-form textarea {
-  resize: none;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 14px;
-  margin-bottom: 10px;
-  background-color: #F3F3F3; /* Added grey background color */
+    flex-basis: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-right: 10px;
 }
 
 .add-note-form input[type="text"] {
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 14px;
-  margin-bottom: 10px;
-  background-color: #F3F3F3; /* Added grey background color */
+    flex-basis: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-right: 10px;
 }
 
 .add-note-form button {
@@ -240,8 +242,14 @@ padding: 20px!important;
 }
 
 #note-category {
-padding: 15px;
-border-radius: 10px;
+    flex-basis: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-right: 10px;
 }
 
 .search-wrapper {
@@ -289,15 +297,17 @@ pointer-events: none;
       animation: fade-in-fwd 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 .modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-  position: relative;
+position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+min-width: 840px;
 }
-
 .close {
     background-color: #dc3545;
     color: white;
