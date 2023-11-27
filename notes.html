@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,125 +12,130 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </head>
+
 <body>
-    <div id="container">
-        <div id="sidePanel">
-            <div class="sidepanel-heading">
-            <img class="logo" src="assets/logo.svg" alt="Logo">
-            <h2 class="sidepanel">Workspace</h2>
-        </div>
-            <ul>
-                <div class="section-sidepanel">TASKS</div>
-              <li><a href="index.html"><iconify-icon icon="radix-icons:dashboard" width="28"></iconify-icon>To Do</a></li>
-              <li><a href="index.html"><iconify-icon icon="solar:archive-linear" width="28"></iconify-icon>Archived</a></li>
-            <!-- SECTION -->
-              <div class="space-line"></div>
-            <!-- SECTION -->
-              <div class="section-sidepanel">SOCIALS</div>
-              <li><li><a href="poster.html"><iconify-icon icon="mynaui:send" width="28"></iconify-icon>Posts</a></li>
-              <div class="space-line"></div>
+  <div id="container">
+    <div id="sidePanel">
+      <div class="sidepanel-heading">
+        <img class="logo" src="assets/logo.svg" alt="Logo">
+        <h2 class="sidepanel">Workspace</h2>
+      </div>
+      <ul>
+        <div class="section-sidepanel">TASKS</div>
+        <li><a href="index.html"><iconify-icon icon="radix-icons:dashboard" width="28"></iconify-icon>To Do</a></li>
+        <li><a href="index.html"><iconify-icon icon="solar:archive-linear" width="28"></iconify-icon>Archived</a></li>
+        <!-- SECTION -->
+        <div class="space-line"></div>
+        <!-- SECTION -->
+        <div class="section-sidepanel">SOCIALS</div>
+        <li>
+        <li><a href="Posts.html"><iconify-icon icon="mynaui:send" width="28"></iconify-icon>Posts</a></li>
+        <div class="space-line"></div>
         <!-- SECTION -->
         <div class="section-sidepanel">TOOLS</div>
         <li><a href="notes.html"><iconify-icon icon="fluent:note-16-regular" width="28"></iconify-icon>Notes</a></li>
-        <li><a href="coder.html"><iconify-icon icon="streamline:ai-prompt-spark" width="28"></iconify-icon>Coder</a></li>
-            
-              <!-- Add more options as needed -->
-            </ul>
-            <div>Version 0.91</div>
-          </div>
-          <div id="content">
-            <div class="header-wrapper">
-                <h1>Notes</h1>
-                <button id="openAddNoteModal" onclick="openAddNoteModal()">New Note +</button>
-              </div>              
-<div class="container-test">
-    <div id="addNoteModal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeAddNoteModal()">&times;</span>
-    <div class="add-note-wrapper">
-      <form class="add-note-form">
-        <input type="text" id="note-project" placeholder="Enter project">
-        <select id="note-category">
-          <option value="Idea">Idea</option>
-          <option value="To do">To do</option>
-          <option value="Remember">Remember</option>
-          <option value="Other">Other</option>
-        </select>
-        <textarea id="note-content" rows="4" placeholder="Enter your note"></textarea>
-        <div class="color-picker">
-          <label class="yellow">
-            <input type="radio" name="color" value="#FFEEB2" checked>
-            <span></span>
-          </label>
-          <label class="green">
-            <input type="radio" name="color" value="#B2FFD6">
-            <span></span>
-          </label>
-          <label class="red">
-            <input type="radio" name="color" value="#ffb2b2">
-            <span></span>
-          </label>
-          <label class="blue">
-            <input type="radio" name="color" value="#B2D9FF">
-            <span></span>
-          </label>
-        </div>
-        <button id="add-note">Add Note</button>
-      </form>
-    </div>
-    </div>
-    </div>
-    <div class="notes-wrapper">
-      <div class="search-wrapper">
-        <form class="search-form">
-          <input type="text" id="search-input" placeholder="Search">
-        </form>
-        <button id="export-notes">Export Notes (.txt)</button>
-      </div>
-      <div class="note-grid" id="notes-container"></div>
-    </div>
-  </div>
+        <li><a href="coder.html"><iconify-icon icon="streamline:ai-prompt-spark" width="28"></iconify-icon>Coder</a>
+        </li>
 
-  <!-- Edit Note Modal -->
-  <div id="edit-note-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Edit Note</h2>
-      <form id="edit-note-form">
-        <input type="hidden" id="edit-note-index">
-        <input type="text" id="edit-note-project" placeholder="Enter project">
-        <select id="edit-note-category">
-          <option value="Idea">Idea</option>
-          <option value="To do">To do</option>
-          <option value="Remember">Remember</option>
-          <option value="Other">Other</option>
-        </select>
-        <textarea id="edit-note-content" rows="4" placeholder="Enter your note"></textarea>
-        <div class="color-picker">
-          <label class="yellow">
-            <input type="radio" name="edit-note-color" value="#FFEEB2" checked>
-            <span></span>
-          </label>
-          <label class="green">
-            <input type="radio" name="edit-note-color" value="#B2FFD6">
-            <span></span>
-          </label>
-          <label class="red">
-            <input type="radio" name="edit-note-color" value="#ffb2b2">
-            <span></span>
-          </label>
-          <label class="blue">
-            <input type="radio" name="edit-note-color" value="#B2D9FF">
-            <span></span>
-          </label>
-        </div>
-        <button type="submit">Save</button>
-      </form>
+        <!-- Add more options as needed -->
+      </ul>
+      <div>Version 0.91</div>
     </div>
-  </div>
+    <div id="content">
+      <div class="header-wrapper">
+        <h1>Notes</h1>
+        <button id="openAddNoteModal" onclick="openAddNoteModal()">New Note +</button>
+      </div>
+      <div class="container-test">
+        <div id="addNoteModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeAddNoteModal()">&times;</span>
+            <div class="add-note-wrapper">
+              <form class="add-note-form">
+                <input type="text" id="note-project" placeholder="Enter project">
+                <select id="note-category">
+                  <option value="Idea">Idea</option>
+                  <option value="To do">To do</option>
+                  <option value="Remember">Remember</option>
+                  <option value="Other">Other</option>
+                </select>
+                <textarea id="note-content" rows="4" placeholder="Enter your note"></textarea>
+                <div class="color-picker">
+                  <label class="yellow">
+                    <input type="radio" name="color" value="#FFEEB2" checked>
+                    <span></span>
+                  </label>
+                  <label class="green">
+                    <input type="radio" name="color" value="#B2FFD6">
+                    <span></span>
+                  </label>
+                  <label class="red">
+                    <input type="radio" name="color" value="#ffb2b2">
+                    <span></span>
+                  </label>
+                  <label class="blue">
+                    <input type="radio" name="color" value="#B2D9FF">
+                    <span></span>
+                  </label>
+                </div>
+                <button id="add-note">Add Note</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="notes-wrapper">
+          <div class="search-wrapper">
+            <form class="search-form">
+              <input type="text" id="search-input" placeholder="Search">
+            </form>
+            <button id="export-notes">Export Notes (.txt)</button>
+          </div>
+          <div class="note-grid" id="notes-container"></div>
+        </div>
+      </div>
+
+      <!-- Edit Note Modal -->
+      <div id="edit-note-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Edit Note</h2>
+          <form id="edit-note-form">
+            <input type="hidden" id="edit-note-index">
+            <input type="text" id="edit-note-project" placeholder="Enter project">
+            <select id="edit-note-category">
+              <option value="Idea">Idea</option>
+              <option value="To do">To do</option>
+              <option value="Remember">Remember</option>
+              <option value="Other">Other</option>
+            </select>
+            <textarea id="edit-note-content" rows="4" placeholder="Enter your note"></textarea>
+            <div class="color-picker">
+              <label class="yellow">
+                <input type="radio" name="edit-note-color" value="#FFEEB2" checked>
+                <span></span>
+              </label>
+              <label class="green">
+                <input type="radio" name="edit-note-color" value="#B2FFD6">
+                <span></span>
+              </label>
+              <label class="red">
+                <input type="radio" name="edit-note-color" value="#ffb2b2">
+                <span></span>
+              </label>
+              <label class="blue">
+                <input type="radio" name="edit-note-color" value="#B2D9FF">
+                <span></span>
+              </label>
+            </div>
+            <button type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+
 </html>
 <script src="script.js"></script> <!-- Link to your external script.js file -->
 <script src="script-notes.js"></script> <!-- Link to your external script.js file -->
 
 </body>
+
 </html>

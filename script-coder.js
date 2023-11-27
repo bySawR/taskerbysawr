@@ -21,9 +21,9 @@ function openModal() {
   document.getElementById('taskFormModal').style.display = 'block';
 }
 
-// Function to generate the poster code
-function generatePosterCode() {
-  var productLinkInput = document.getElementById('poster-product-link-modal');
+// Function to generate the Posts code
+function generatePostsCode() {
+  var productLinkInput = document.getElementById('Posts-product-link-modal');
   var productLink = productLinkInput.value.trim();
 
   var driveLinkRegex = /^https:\/\/drive\.google\.com\/file\/d\/([^/]+)\/view\?usp=sharing$/;

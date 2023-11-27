@@ -4,14 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coder | by SawR</title>
+  <title>Poster | by SawR</title>
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style-Posts.css">
-  <link rel="stylesheet" href="style-coder.css">
+  <link rel="stylesheet" href="style-poster.css">
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-
 
 </head>
 
@@ -31,7 +29,7 @@
         <!-- SECTION -->
         <div class="section-sidepanel">SOCIALS</div>
         <li>
-        <li><a href="Posts.html"><iconify-icon icon="mynaui:send" width="28"></iconify-icon>Posts</a></li>
+        <li><a href="poster.html"><iconify-icon icon="mynaui:send" width="28"></iconify-icon>Posts</a></li>
         <div class="space-line"></div>
         <!-- SECTION -->
         <div class="section-sidepanel">TOOLS</div>
@@ -45,35 +43,40 @@
     </div>
     <div id="content">
       <div class="top-wrapper">
-        <h1>Coder</h1>
+        <h1>Posts</h1>
         <form>
-          <input type="text" id="Posts-product-link"
-            placeholder="https://drive.google.com/file/d/17tMRgf_UJ_KO9qRA38Am0yogenJLWCOL/view?usp=sharing" size="50">
-          <button type="button" id="generate-Posts-code-button" onclick="openModal()">New Code +</button>
+          <input type="text" id="product-link"
+            placeholder="https://shop.bysawr.com/b/signal50-ghoulie-camo-screenshot-pack" size="50">
+          <button type="button" id="generate-tweet-button">New Post +</button>
         </form>
+        <div class="tweet-wrapper">
+          <div id="tweet"></div>
+        </div>
       </div>
-      <div class="saved-code-wrapper">
-        <div id="saved-code"></div>
+      <div class="saved-tweets-wrapper">
+        <div id="saved-tweets"></div>
       </div>
+
     </div>
+  </div>
 
-    <!-- Modal content -->
-    <div id="overlay" onclick="closeModal()"></div>
-    <div id="taskFormModal">
-      <button id="closeModal" onclick="closeModal()">✖</button>
-      <form id="taskForm">
-        <label for="custom-product-name">Product Name</label>
-        <input type="text" id="custom-product-name" placeholder="Example: X Follow Tag">
-        <label for="Posts-product-link-modal">Product Link</label>
-        <input type="text" id="Posts-product-link-modal"
-          placeholder="https://drive.google.com/file/d/17tMRgf_UJ_KO9qRA38Am0yogenJLWCOL/view?usp=sharing" size="50">
+  <!-- Modal content -->
+  <div id="overlay" onclick="closeModal()"></div>
+  <div id="taskFormModal">
+    <button id="closeModal" onclick="closeModal()">✖</button>
+    <form id="taskForm">
+      <input type="text" id="product-link" placeholder="https://shop.bysawr.com/b/signal50-ghoulie-camo-screenshot-pack"
+        size="50">
+      <button type="button" id="generate-tweet-button" onclick="addPost()">Add Post</button>
+    </form>
+  </div>
+  </div>
+  </div>
 
-        <button type="button" id="add-code-button" onclick="generatePostsCode()">Add Code</button>
-      </form>
-    </div>
 
-    <script src="script.js"></script> <!-- Link to your external script.js file -->
-    <script src="script-coder.js"></script> <!-- Link to your external script.js file -->
+  <script src="script.js"></script> <!-- Link to your external script.js file -->
+  <script src="script-poster.js"></script> <!-- Link to your external script.js file -->
+
 </body>
 
 </html>
