@@ -132,3 +132,9 @@
       #generate-Posts-code-button:hover {
         background-color: #1a1a1a; /* Darken the color on hover */
       }
+
+        .top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
