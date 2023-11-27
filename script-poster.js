@@ -42,6 +42,15 @@ function renderSavedTweets() {
   const savedTweetsContainer = document.getElementById('saved-tweets');
   savedTweetsContainer.innerHTML = '';
 
+  if (savedTweets.length === 0) {
+    // Display an empty state message when there are no saved tweets
+    const emptyStateMessage = document.createElement('div');
+    emptyStateMessage.classList.add('empty-state');
+    emptyStateMessage.textContent = 'No saved posts yet. Go ahead and add a post to showcase here!';
+    savedTweetsContainer.appendChild(emptyStateMessage);
+    return;
+  }
+
   savedTweets.forEach((tweet, index) => {
     const tweetText = tweet.tweetText;
     const tweetDate = new Date(tweet.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
@@ -66,6 +75,7 @@ function renderSavedTweets() {
     savedTweetsContainer.appendChild(tweetContainer);
   });
 }
+
 
 document.getElementById("saved-tweets").addEventListener("click", function(event) {
   if (event.target.classList.contains('copy-button')) {
