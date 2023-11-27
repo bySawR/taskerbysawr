@@ -207,9 +207,18 @@ function exportNotesToTxt() {
 // Function to open the "add-note-wrapper" modal
 function openAddNoteModal() {
   document.getElementById("addNoteModal").style.display = "block";
+  document.getElementById("overlay").classList.add("active");
 }
 
 // Function to close the "add-note-wrapper" modal
 function closeAddNoteModal() {
   document.getElementById("addNoteModal").style.display = "none";
+  document.getElementById("overlay").classList.remove("active");
 }
+
+// Close the modal when clicking outside of it
+document.getElementById("overlay").addEventListener("click", function (event) {
+  if (event.target === this) {
+    closeAddNoteModal();
+  }
+});
