@@ -1,3 +1,14 @@
+      function setActiveTab(clickedTab) {
+        // Remove the "active" class from all tabs
+        var tabs = document.querySelectorAll('.tab');
+        tabs.forEach(function (tab) {
+          tab.classList.remove('active');
+        });
+
+        // Add the "active" class to the clicked tab
+        clickedTab.classList.add('active');
+      }
+
 function addTask() {
   const taskInput = document.getElementById('task');
   const descriptionInput = document.getElementById('description');

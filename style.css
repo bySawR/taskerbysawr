@@ -185,8 +185,8 @@ h2.sidepanel {
 
 #sidePanel .active {
     text-decoration: none;
-    background-color: var(--primary-color);
-    color: var(--background);
+    background-color: var(--primary-color)!important;
+    color: var(--background)!important;
 }
 
 #sidePanel .active img {
