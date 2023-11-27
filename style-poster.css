@@ -124,4 +124,6 @@ min-width: 160px;
 
   #product-link {
     padding: 20px;
+    min-height: 72px;
+    min-width: 615px;
   }
