@@ -100,7 +100,7 @@ function addTask() {
 
             // Display description
             const descriptionContainer = document.createElement('div');
-            descriptionContainer.style.maxWidth = '350px'; // Set the max-width property
+            descriptionContainer.style.maxWidth = '400px'; // Set the max-width property
             descriptionContainer.style.wordWrap = 'break-word'; // Set word-wrap to break long words
 
             if (task.description) {
@@ -153,8 +153,8 @@ function addTask() {
             // Set a fixed width of 200px for each detail item
             const detailItems = taskDetails.querySelectorAll('p');
             detailItems.forEach(item => {
-                item.style.width = '350px';
-                item.style.maxWidth = '350px';
+                item.style.width = '400px';
+                item.style.maxWidth = '400px';
             });
 
             taskList.appendChild(listItem);
