@@ -42,7 +42,7 @@ function generatePostsCode() {
       <!-- File Start -->
       <div class="file-wrapper">
         <div class="icon-ani">
-          <iconify-icon icon="icon-park-outline:video" width="30"></iconify-icon>
+        <iconify-icon icon="mynaui:video" width="28" height="28"></iconify-icon>
         </div>
         <div class="name">${customProductName}</div>
         <div class="format">MP4</div>
